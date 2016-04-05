@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-vG-w5H">
+                                <rect key="frame" x="20" y="20" width="56" height="30"/>
+                                <animations/>
+                                <state key="normal" title="SignOut"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pt-bb-F9E">
+                                <rect key="frame" x="502" y="20" width="78" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Disconnect"/>
+                            </button>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbI-UI-rOF" customClass="GIDSignInButton">
+                                <rect key="frame" x="242" y="20" width="116" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="DnF-FE-aTh"/>
+                                    <constraint firstAttribute="height" constant="30" id="fb6-2O-2jM"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="305" y="236" width="0.0" height="328"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="405" y="236" width="0.0" height="328"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Pt-bb-F9E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="C6N-dv-zYo"/>
+                            <constraint firstItem="dbI-UI-rOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IiT-Ka-EEi"/>
+                            <constraint firstItem="y3P-vG-w5H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PQ5-Lk-OYX"/>
+                            <constraint firstItem="y3P-vG-w5H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XV0-eh-bK2"/>
+                            <constraint firstItem="dbI-UI-rOF" firstAttribute="top" secondItem="y3P-vG-w5H" secondAttribute="top" id="i9S-14-TJF"/>
+                            <constraint firstItem="2Pt-bb-F9E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xyS-an-qp0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="disconnectButton" destination="2Pt-bb-F9E" id="uzN-RO-VSN"/>
+                        <outlet property="signInButtonGoogle" destination="dbI-UI-rOF" id="IAb-B2-4UV"/>
+                        <outlet property="signOutButton" destination="y3P-vG-w5H" id="6cc-DC-w4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="440"/>
+        </scene>
+    </scenes>
+</document>
